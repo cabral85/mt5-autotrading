@@ -7,15 +7,22 @@ A lista de contratos futuros pode ser editada através do arquivo "future-contra
 
 Para adicionar um par de moedas deverá ser feito através do arquivo "stock-list" pois a ideia do arquivo de contratos futuros é que ele leia o papel e adicione automaticamente a variavel de contrato atual, exemplo: WDO deve passar para WDOK22, WIN deve passar para WINM22, e esse papel deverá ser atualizado automaticamente, algo que não ocorre com ações ou pares de moedas.
 
-## Para executar o projeto
-
-<p>$ `pip install -r requirements`</p>
-<p>$ `python app.py`</p>
-
-# Requisitos
+## Requisitos
 * Ter o MetaTrader5 instalado no computador
 * Ter ao menos o python 3.x instalado
 * Ter o gerenciador de pacotes "pip" instalado
+
+## Para executar o projeto
+
+```
+$ python -m venv mt5_env
+
+$ .\env\Scripts\activate.bat
+
+$ pip install -r requirements
+
+$ python app.py
+```
 
 ## Etapas do Projeto
 * Etapa 1 - Pegar os preços :heavy_check_mark:
