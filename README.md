@@ -9,8 +9,8 @@ Para adicionar um par de moedas deverá ser feito através do arquivo "stock-lis
 
 ## Para executar o projeto
 
-$ `pip install -r requirements`
-$ `python app.py`
+<p>$ `pip install -r requirements`</p>
+<p>$ `python app.py`</p>
 
 # Requisitos
 * Ter o MetaTrader5 instalado no computador
@@ -18,11 +18,12 @@ $ `python app.py`
 * Ter o gerenciador de pacotes "pip" instalado
 
 ## Etapas do Projeto
-* Etapa 1 - Pegar os preços e média exponencial
-* Etapa 2 - Setup 9.2 do Larry Williams e enviar mensagem na tela
-* Etapa 3 - Adicionar preço de entrada, stop loss e take profit na notificação de tela
-* Etapa 4 - Adicionar setups 9.0 e 9.1 do Larry Willians
-* Etapa 5 - Automatizar as entradas de acordo com os preços e stops com razão de ganho de ao menos 1x1
-* Etapa 6 - Adicionar leitura de figuras gráficas: OCO e OCOI - e notificar
-* Etapa 7 - Adicionar leitura de figuras gráficas: triangulo e retangulo - e notificar
-* Etapa 8 - Automatizar a entrada das figuras gráficas após pull-back
+* Etapa 1 - Pegar os preços :heavy_check_mark:
+* Etapa 2 - Criar média exponencial - :hourglass:
+* Etapa 3 - Setup 9.2 do Larry Williams e enviar mensagem na tela
+* Etapa 4 - Adicionar preço de entrada, stop loss e take profit na notificação de tela
+* Etapa 5 - Adicionar setups 9.0 e 9.1 do Larry Willians
+* Etapa 6 - Automatizar as entradas de acordo com os preços e stops com razão de ganho de ao menos 1x1
+* Etapa 7 - Adicionar leitura de figuras gráficas: OCO e OCOI - e notificar
+* Etapa 8 - Adicionar leitura de figuras gráficas: triangulo e retangulo - e notificar
+* Etapa 9 - Automatizar a entrada das figuras gráficas após pull-back
