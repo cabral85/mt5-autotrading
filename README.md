@@ -27,10 +27,12 @@ $ python app.py
 ## Etapas do Projeto
 * Etapa 1 - Pegar os preços :heavy_check_mark:
 * Etapa 2 - Criar média exponencial - :hourglass:
-* Etapa 3 - Setup 9.2 do Larry Williams e enviar mensagem na tela
-* Etapa 4 - Adicionar preço de entrada, stop loss e take profit na notificação de tela
-* Etapa 5 - Adicionar setups 9.0 e 9.1 do Larry Willians
-* Etapa 6 - Automatizar as entradas de acordo com os preços e stops com razão de ganho de ao menos 1x1
-* Etapa 7 - Adicionar leitura de figuras gráficas: OCO e OCOI - e notificar
-* Etapa 8 - Adicionar leitura de figuras gráficas: triangulo e retangulo - e notificar
-* Etapa 9 - Automatizar a entrada das figuras gráficas após pull-back
+* Etapa 3 - Criar regra para incrementar candles e deletar o ultimo para sempre manter 50
+* Etapa 4 - Criar regra para incrementar indicadores
+* Etapa 5 - Setup 9.2 do Larry Williams e enviar mensagem na tela
+* Etapa 6 - Adicionar preço de entrada, stop loss e take profit na notificação de tela
+* Etapa 7 - Adicionar setups 9.0 e 9.1 do Larry Willians
+* Etapa 8 - Automatizar as entradas de acordo com os preços e stops com razão de ganho de ao menos 1x1
+* Etapa 9 - Adicionar leitura de figuras gráficas: OCO e OCOI - e notificar
+* Etapa 10 - Adicionar leitura de figuras gráficas: triangulo e retangulo - e notificar
+* Etapa 11 - Automatizar a entrada das figuras gráficas após pull-back
