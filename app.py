@@ -6,7 +6,7 @@ register_matplotlib_converters()
 import MetaTrader5 as mt5
 
 from src.contracts import Contracts
-from src.indicators import Indicators
+from src.setups import Setups
 
 class AutoTrading:
     def __init__(self):
@@ -14,14 +14,13 @@ class AutoTrading:
         self.default_candles_qtt = 50
 
         contracts = Contracts()
-        stocks = contracts.getStocks()
-        futures = contracts.getFutureContracts()
+        stocks = contracts.get_stocks()
+        futures = contracts.get_future_contracts()
 
         self._futures_prices = self.__initialize_stock_price(futures)
         self._stock_prices = self.__initialize_stock_price(stocks)
 
-        indicators = Indicators()
-        indicators.exponential_moving_average(self._futures_prices, 21)
+        self.__run_setups()
 
         
     def __create_connection(self):
@@ -46,8 +45,15 @@ class AutoTrading:
         return stock_prices
 
 
-    def __checkSetups(self):
-        return
+    def __run_setups(self):
+        setups = Setups()
+        for futures in self._futures_prices:
+            stock_name = list(futures.keys())[0]
+            setups.run(stock_name, futures)
+
+        for stock in self._stock_prices:
+            stock_name = list(stock.keys())[0]
+            setups.run(stock_name, stock)
 
 
 run = AutoTrading()
