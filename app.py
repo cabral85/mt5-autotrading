@@ -8,7 +8,7 @@ import MetaTrader5 as mt5
 from src.contracts import Contracts
 from src.setups import Setups
 
-class AutoTrading:
+class AutoTrading():
     def __init__(self):
         self.__create_connection()
         self.default_candles_qtt = 50
