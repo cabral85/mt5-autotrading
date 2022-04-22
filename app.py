@@ -6,6 +6,7 @@ register_matplotlib_converters()
 import MetaTrader5 as mt5
 
 from src.contracts import Contracts
+from src.indicators import Indicators
 
 class AutoTrading:
     def __init__(self):
@@ -18,9 +19,11 @@ class AutoTrading:
 
         self._futures_prices = self.__initialize_stock_price(futures)
         self._stock_prices = self.__initialize_stock_price(stocks)
+
+        indicators = Indicators()
+        indicators.exponential_moving_average(self._futures_prices, 21)
+
         
-
-
     def __create_connection(self):
         if not mt5.initialize():
             print("mt5 initialize() failed")
@@ -29,8 +32,11 @@ class AutoTrading:
         print(mt5.terminal_info())
         print(mt5.version())
 
+
     def __get_stock_price(self, stock, qttCandles):
-        return mt5.copy_rates_from(stock, mt5.TIMEFRAME_M5, datetime(2022, 4, 22), qttCandles)
+        today = datetime.today()
+        return mt5.copy_rates_from(stock, mt5.TIMEFRAME_M5, datetime(today.year, today.month, today.day), qttCandles)
+
 
     def __initialize_stock_price(self, stocks):
         stock_prices = []
@@ -39,7 +45,9 @@ class AutoTrading:
             stock_prices.append({stock: price})
         return stock_prices
 
+
     def __checkSetups(self):
         return
+
 
 run = AutoTrading()
