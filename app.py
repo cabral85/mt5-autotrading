@@ -1,6 +1,4 @@
-def main():
-    return
+from src.setup.setup_90 import Setup90
 
-
-if __name__ == "main":
-    main()
+setup = Setup90()
+setup.run("WDOK22")

@@ -1,4 +1,3 @@
 env/
 .vscode/
-src/__pycache__
-src/trade_system/__pycache__/
+__pycache__
