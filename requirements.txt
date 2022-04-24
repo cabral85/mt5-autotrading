@@ -1,4 +1,3 @@
 MetaTrader5
-matplotlib
 pandas
 numpy

@@ -26,8 +26,8 @@ $ python app.py
 
 ## Etapas do Projeto
 * Etapa 1 - Pegar os preços :heavy_check_mark:
-* Etapa 2 - Criar média exponencial - :hourglass:
-* Etapa 3 - Criar regra para incrementar candles e deletar o ultimo para sempre manter 50
+* Etapa 2 - Criar média simples - :heavy_check_mark:
+* Etapa 3 - Criar regra para incrementar candles e deletar o ultimo para sempre manter 50 :hourglass:
 * Etapa 4 - Criar regra para incrementar indicadores
 * Etapa 5 - Setup 9.2 do Larry Williams e enviar mensagem na tela
 * Etapa 6 - Adicionar preço de entrada, stop loss e take profit na notificação de tela

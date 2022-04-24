@@ -1,14 +1,13 @@
-from indicators import Indicators
-from src.trade_system.setup_interface import SetupInterface
+from src.indicators import Indicators
 
-class Setup90(SetupInterface):
+class Setup90():
     def __init__(self):
         return
     
-    def __get_indicators(self, prices):
+    def __get_indicators(self, prices, stock_name):
         indicators = Indicators()
-        self._ema9 = indicators.exponential_moving_average(prices, 9)
-        self._ema21 = indicators.exponential_moving_average(prices, 21)
+        self._ema9 = indicators.simple_moving_average(prices, stock_name, 9)
+        self._ema21 = indicators.simple_moving_average(prices, stock_name, 21)
 
     def run(self, stock_name, prices):
-        self.__get_indicators(prices)
+        self.__get_indicators(prices, stock_name)

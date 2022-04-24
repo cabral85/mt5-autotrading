@@ -1,12 +1,8 @@
 from datetime import datetime
-import matplotlib.pyplot as plt
-import pandas as pd
-from pandas.plotting import register_matplotlib_converters
-register_matplotlib_converters()
 import MetaTrader5 as mt5
 
 from src.contracts import Contracts
-from src.setups import Setups
+from src.trade_system.setup90 import Setup90
 
 class AutoTrading():
     def __init__(self):
@@ -46,7 +42,7 @@ class AutoTrading():
 
 
     def __run_setups(self):
-        setups = Setups()
+        setups = Setup90()
         for futures in self._futures_prices:
             stock_name = list(futures.keys())[0]
             setups.run(stock_name, futures)
