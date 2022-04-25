@@ -1,3 +1,4 @@
+from time import sleep
 import MetaTrader5 as mt5
 
 from src.setup.setup_90 import Setup90
@@ -14,6 +15,8 @@ if not mt5.initialize():
 print(mt5.terminal_info())
 print(mt5.version())
 
-
-setup = Setup90("WINM22", mt5)
-setup.run()
+while True:
+    for stock in stocks:
+        setup = Setup90(mt5)
+        setup.run(stock)
+    sleep(60)
