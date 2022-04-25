@@ -33,16 +33,13 @@ class Setup90:
 
     def __check_for_trade(self):
         avg_inclination =((self.__long_sma[-1] * 100) / self.__long_sma[-9] - 100)
-        print(f"Trend {avg_inclination}")
         trend = avg_inclination > MINIMUM_AVG_INCLINATION
         if self.__short_sma[-1] > self.__long_sma[-1] and trend:
             if self.__low_prices[-1] <= self.__short_sma[-1] and self.__close_prices[-1] > self.__short_sma[-1]:
                 self.__msg.send_notification(SETUP_NAME, self.__stock_name)
-                print("Deu Compra")
         elif self.__short_sma[-1] < self.__long_sma[-1] and trend:
             if self.__high_prices[-1] >= self.__short_sma[-1] and self.__close_prices[-1] < self.__short_sma[-1]:
                 self.__msg.send_notification(SETUP_NAME, self.__stock_name)
-                print("Deu Venda")
 
     def run(self):
         while True:
