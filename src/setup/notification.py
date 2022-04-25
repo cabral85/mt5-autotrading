@@ -10,5 +10,5 @@ class Notification:
             title='Notification',
             message=f'Setup {setup_name} {stock_name}',
             app_icon=None,
-            timeout=10,
+            timeout=30,
         )
