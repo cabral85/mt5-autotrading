@@ -31,7 +31,7 @@ $ python app.py
 * Etapa 4 - Criar regra para incrementar indicadores :heavy_check_mark:
 * Etapa 5 - Setup da média de 9 do Larry Williams e enviar mensagem na tela :heavy_check_mark:
 * Etapa 6 - Adicionar preço de entrada, stop loss e take profit na notificação de tela :hourglass:
-* Etapa 7 - Automatizar as entradas de acordo com os preços e stops com razão de ganho de ao menos 1x1
+* Etapa 7 - Automatizar as entradas de acordo com os preços e stops com razão de ganho de ao menos 1x1 :hourglass:
 * Etapa 8 - Adicionar leitura de figuras gráficas: OCO e OCOI - e notificar
 * Etapa 9 - Adicionar leitura de figuras gráficas: triangulo e retangulo - e notificar
 * Etapa 10 - Automatizar a entrada das figuras gráficas após pull-back
